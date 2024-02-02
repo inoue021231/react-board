@@ -1,9 +1,9 @@
 # やること
-・create-react-appを使ってReactプロジェクトを作成する
+・create-react-appを使ってReactプロジェクトを作成する\
 ・Node.jsのバージョン管理ツールを使って開発時のバージョンを固定する
 
 # やったこと
-・npx create-react-app react-boardでプロジェクトを作成した
+・npx create-react-app react-boardでプロジェクトを作成した\
 ・nvm use v21.6.1
 
 
