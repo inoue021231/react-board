@@ -1,3 +1,13 @@
+# やること
+・create-react-appを使ってReactプロジェクトを作成する
+・Node.jsのバージョン管理ツールを使って開発時のバージョンを固定する
+
+# やったこと
+・npx create-react-app react-boardでプロジェクトを作成した
+・nvm use v21.6.1
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
