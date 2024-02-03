@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { getThreads } from "./api";
+import Home from "./components/Home";
+import NewThread from "./components/NewThread";
 
 function App() {
+  const [threads, setThreads] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const data = await getThreads();
+      setThreads(data);
+    })();
+  }, []);
+
+  console.log(threads);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path={"/"} element={<Home threads={threads} />} />
+        <Route
+          path={"/thread/new"}
+          element={<NewThread setThreads={setThreads} />}
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

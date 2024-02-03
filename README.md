@@ -1,12 +1,22 @@
 # やること
-・create-react-appを使ってReactプロジェクトを作成する
-・Node.jsのバージョン管理ツールを使って開発時のバージョンを固定する
+
+・create-react-app を使って React プロジェクトを作成する
+・Node.js のバージョン管理ツールを使って開発時のバージョンを固定する
+
+・スレッド一覧画面の作成(/)
+
+・スレッド新規作成画面(/thread/new)
+・スレッド一覧画面にスレッド新規作成画面のボタンを作成する
 
 # やったこと
-・npx create-react-app react-boardでプロジェクトを作成した
+
+・npx create-react-app react-board でプロジェクトを作成した
 ・nvm use v21.6.1
 
+・スレッド一覧画面の作成をした(/)
 
+・スレッド新規作成画面の作成をした(/thread/new)
+・スレッド一覧画面にスレッド新規作成画面のボタンを作成した
 
 # Getting Started with Create React App
 
