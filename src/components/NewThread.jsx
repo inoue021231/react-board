@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import Header from "./Header";
-import { getThreads, postThreads } from "../api";
+import { createThreads, getThreads } from "../api";
 
 const NewThread = (props) => {
   const { setThreads } = props;
@@ -12,7 +12,7 @@ const NewThread = (props) => {
   const navigate = useNavigate();
 
   const handleCreateThread = async () => {
-    const res = await postThreads({ title: title });
+    await createThreads({ title: title });
     const data = await getThreads();
     setThreads(data);
     navigate("/");

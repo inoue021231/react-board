@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { getThreads } from "./api";
 import Home from "./components/Home";
 import NewThread from "./components/NewThread";
+import PostList from "./components/PostList";
 
 function App() {
   const [threads, setThreads] = useState([]);
@@ -26,6 +27,10 @@ function App() {
         <Route
           path={"/thread/new"}
           element={<NewThread setThreads={setThreads} />}
+        />
+        <Route
+          path={"/thread/:thread_id"}
+          element={<PostList threads={threads} />}
         />
       </Routes>
     </BrowserRouter>
